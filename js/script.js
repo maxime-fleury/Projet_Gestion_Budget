@@ -22,10 +22,10 @@ btn_add_revenu.addEventListener("click", function(){ addInput(revenu);});
 function addInput(id){
     var newInput = document.createElement("input");
         newInput.setAttribute("type", "text");
-        newInput.setAttribute('class', "m-2 text-center");
+        newInput.setAttribute('class', "m-2 text-center form-control");
     var newInput2 = document.createElement("input");
         newInput2.setAttribute("type", "text");
-        newInput2.setAttribute('class', "m-2 text-center");
+        newInput2.setAttribute('class', "m-2 text-center form-control");
     var newDiv = document.createElement("div");
         newDiv.setAttribute('class', "rowss");
    
