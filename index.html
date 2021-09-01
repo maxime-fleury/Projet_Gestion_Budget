@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment budget ?</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+
+    <script src='js/script.js' defer></script>
+</head>
+<body>
+    <style>
+        .container{
+            display:flex;
+            flex-direction:row;
+            justify-content: space-evenly;
+        }
+        #revenu, #depenses{
+            display:flex;
+            flex-direction:column;
+        }
+        .rowss{
+            display:flex;
+            flex-direction:row;
+        }
+    </style>
+    <div class='container'>
+        <div id='depenses'>
+            <button id='btn_add_deps' class='btn btn-dark m-2'>+ Depenses</button>
+            <div class='rowss'>
+                <div class='btn btn-success w-100 m-2' >Nom</div>
+                <div class='btn btn-success  w-100 m-2'>Montant</div>
+            </div>
+        </div>
+        <div id='revenu'>
+            <button id='btn_add_revenu' class='btn btn-dark m-2'>+ Revenus</button>
+            <div class='rowss'>
+                <div class='btn btn-success w-100 m-2' >Nom</div>
+                <div class='btn btn-success  w-100 m-2'>Montant</div>
+            </div>
+        </div>
+    </div> 
+    <center>
+    <div id='resultats'>
+        <div ></div>
+    </div>
+</center>
+</body>
+</html>
