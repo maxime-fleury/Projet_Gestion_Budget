@@ -21,7 +21,7 @@ btn_add_revenu.addEventListener("click", function(){ addInput(revenu);});
 //creer un input de type text, et l'ajoute dans l'element passé en parametre "id"
 function addInput(id){
     var newInput = document.createElement("input");
-        newInput.setAttribute("type", "text");
+        newInput.setAttribute("type", "number");
         newInput.setAttribute('class', "m-2 text-center form-control");
     var newInput2 = document.createElement("input");
         newInput2.setAttribute("type", "text");
