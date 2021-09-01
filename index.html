@@ -9,7 +9,7 @@
 
     <script src='js/script.js' defer></script>
 </head>
-<body>
+<body >
     <style>
         .container{
             display:flex;
@@ -27,10 +27,10 @@
     </style>
     <div class='container'>
         <div id='depenses'>
-            <button id='btn_add_deps' class='btn btn-dark m-2'>+ Depenses</button>
+            <button id='btn_add_deps' class='btn btn-dark m-2 w-100'>+ Depenses</button>
             <div class='rowss'>
                 <div class='btn btn-success w-100 m-2' >Nom</div>
-                <div class='btn btn-success  w-100 m-2'>Montant</div>
+                <div class='btn btn-success w-100  m-2'>Montant</div>
                 <button id='btn_add_deps' class='btn btn-sm m-2 rounded-circle' disabled>+</button>
             </div>
         </div>
@@ -43,10 +43,12 @@
             </div>
         </div>
     </div> 
-    <div class='d-flex justify-content-center mt-4 bg-light'>
-        <div id='resultats' >
-            <div ></div>
+    <div class='d-flex justify-content-center mt-4 mb-4'>
+        <div class='container border border-dark bg-light' style='width:300px;'>
+            <div id='resultats'   >
+            </div>
         </div>
+
     </div> 
 </body>
 </html>

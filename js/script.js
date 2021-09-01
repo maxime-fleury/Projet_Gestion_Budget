@@ -16,22 +16,21 @@ btn_add_deps.addEventListener("click", function(){ addInput(depenses);});
 
 let btn_add_revenu = document.getElementById("btn_add_revenu");
 btn_add_revenu.addEventListener("click", function(){ addInput(revenu);});
-
+resultat();
 
 //creer un input de type text, et l'ajoute dans l'element passé en parametre "id"
 function addInput(id){
     var newInput = document.createElement("input");
         newInput.setAttribute("type", "number");
-        newInput.setAttribute('class', "m-2 text-center form-control");
+        newInput.setAttribute('class', "m-2 text-center form-control   ");
     var newInput2 = document.createElement("input");
         newInput2.setAttribute("type", "text");
-        newInput2.setAttribute('class', "m-2 text-center form-control");
+        newInput2.setAttribute('class', "m-2 text-center form-control   ");
     var newDiv = document.createElement("div");
         newDiv.setAttribute('class', "rowss");
-   
         
     var newBtn = document.createElement("button");
-        newBtn.setAttribute("class", "btn btn-danger btn-sm m-2 rounded-circle");
+        newBtn.setAttribute("class", "btn btn-danger m-2 text-white rounded");
         newBtn.innerText = "X";
 
         newInput.setAttribute("value", Math.floor(Math.random()*150));
@@ -78,12 +77,21 @@ function resultat(){
         montant_revenu = arrInputRev[i+1].value;
        tot_revenu += parseInt(montant_revenu);
     }
-    results.innerHTML = "<div class='text-danger'>Depense total: <span class='fs-4 fw-bolder'>" + tot_depense + "</span> </div>";
-    results.innerHTML += "<div class='text-success'>Revenu total:  <span class=' fs-4 fw-bolder'>" + tot_revenu + "</span> </div>";
+    results.innerHTML += "<div class='row'>";
+        results.innerHTML += "<div class='text-black'>Depense total: </div>";
+        results.innerHTML += "<div class='text-danger text-center    fs-4 fw-bolder'>" + tot_depense + "</div>";
+    results.innerHTML += "</div>";
+    results.innerHTML += "<div class='col'>";
+        results.innerHTML += "<div class='text-black'>Revenu total:  ";
+        results.innerHTML += "<div class='text-success text-center fs-4 fw-bolder'>" + tot_revenu + "</div>";
+    results.innerHTML += "</div>";
     bilan = (tot_revenu-tot_depense);
     if(bilan >= 0)
         color = "success";
     else color = "danger";
-    results.innerHTML += "<div class='text-"+color+"'>Bilan total:  <span class=' fs-4 fw-bolder'>" + (tot_revenu-tot_depense) + "</span> </div>";
+    results.innerHTML += "<div>";
+    results.innerHTML += "<div class='text-"+color+"'>Bilan total:  ";
+        results.innerHTML += "<div class='text-"+color+" fs-4 fw-bolder text-center'>" + (tot_revenu-tot_depense) + "</div>";
+    results.innerHTML += " </div>";
     
 }
